@@ -25,15 +25,16 @@ def load(loadNum):
         with open("save1", "r") as load1:
             loadedName= load1.readlines()
             name = loadedName[0][:-1]
+            return name
     if loadNum == 2:
         with open("save2", "r") as load2:
             loadedName= load2.readlines()
-            name = loadedName[0][:-1]
-
+            name2 = loadedName[0][:-1]
+            return name2
 
 try:
     save(1)
-    load(1)
-    print(name2)
+    print(load(1))
+    
 except OSError:
     print("can't find file / can't save file")
